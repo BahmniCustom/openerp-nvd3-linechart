@@ -1,0 +1,35 @@
+<template>
+    <div t-name="Chart-d3" t-att-id="widget.element_id" class="oe_chart_d3">
+        <div class="graph_header">
+            <div class="graph-options-container ui-helper-clearfix">
+                <div class="autocomplete-container" id="autocomplete-container">
+                    <label id="autocomplete-label">Product Name</label>
+                    <input type="text" id="autocomplete_field" />
+                </div>
+                <div class="date-container">
+                    <div class="start-date">
+                        <label>Start Date</label>
+                        <input type="text" id="start_date" />
+                    </div>
+                    <div class="end-date">
+                        <label>End Date</label>
+                        <input type="text" id="end_date" />
+                    </div>
+                </div>
+                <div class="action-container">
+                    <button id="showgraph">Show Graph</button>
+                    <button id="download_data">Download Data</button>
+                </div>
+            </div>
+
+        </div>
+        <div class="graph-container">
+            <div class="action-container">
+                <button id="zoomIn">zoomIn</button>
+                <button id="zoomOut">zoomOut</button>
+            </div>
+            <svg class="graph_main_content"/>
+            <canvas t-att-id="'canvas_' + widget.element_id" class="invisible"/>
+        </div>
+    </div>
+</template>
